@@ -7,6 +7,7 @@ class Post(models.Model):
     slug = models.CharField(max_length=200)
     body = models.TextField()
     pub_date = models.DateTimeField(default=timezone.now())
-    #
+
+    # 在admin管理介面顯示的名字
     def __str__(self):
         return self.title
