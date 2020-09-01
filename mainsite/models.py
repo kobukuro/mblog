@@ -8,6 +8,10 @@ class Post(models.Model):
     body = models.TextField()
     pub_date = models.DateTimeField(default=timezone.now())
 
+    class Meta:
+        # "-"代表DESC，沒有"-"代表ASC
+        # ordering = ['-pub_date']
+        ordering = ['pub_date']
     # 在admin管理介面顯示的名字
     def __str__(self):
         return self.title
